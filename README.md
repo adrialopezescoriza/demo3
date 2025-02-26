@@ -2,7 +2,7 @@
 
 Official implementation of
 
-[DEMO<sup>3</sup>: Demonstration-Augmented Reward, Policy, and World Model Learning](https://sites.google.com/view/icml2025demo3) by
+[DEMO<sup>3</sup>: Demonstration-Augmented Reward, Policy, and World Model Learning](https://adrialopezescoriza.github.io/demo3/) by
 
 [Adrià López Escoriza](https://adrialopezescoriza.github.io), [Nicklas Hansen](https://nicklashansen.github.io), [Stone Tao](https://www.stoneztao.com/), [Tongzhou Mu](https://cseweb.ucsd.edu/~t3mu/), [Hao Su](https://cseweb.ucsd.edu/~haosu) (UC San Diego)</br>
 
