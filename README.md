@@ -8,7 +8,7 @@ Official implementation of
 
 <img src="assets/0.gif" width="25%"><img src="assets/1.gif" width="25%"><img src="assets/2.gif" width="25%"><img src="assets/3.gif" width="25%"></br>
 
-[[Website]](https://sites.google.com/view/icml2025demo3) [[Paper]](https://arxiv.org/abs/2310.16828)
+[[Website]](https://adrialopezescoriza.github.io/demo3/) [[Paper]](https://arxiv.org/abs/2310.16828)
 
 ----
 
