@@ -91,6 +91,23 @@ $ python train.py task=ms-stack-cube-semi steps=1000000 enable_reward_learning=f
 
 ----
 
+## Citation
+
+If you find our work useful, please consider citing our paper as follows:
+
+```
+@misc{escoriza2025multistagemanipulationdemonstrationaugmentedreward,
+      title={Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning}, 
+      author={Adrià López Escoriza and Nicklas Hansen and Stone Tao and Tongzhou Mu and Hao Su},
+      year={2025},
+      eprint={2503.01837},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2503.01837}, 
+}
+```
+----
+
 ## Acknowledgements
 This codebase is built upon the [TD-MPC2](https://github.com/nicklashansen/tdmpc2) repository.
 
