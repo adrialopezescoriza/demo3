@@ -70,8 +70,19 @@ We provide examples of how to evaluate our provided DEMO<sup>3</sup> checkpoints
 See the below examples on how to evaluate pre-trained checkpoints. See `eval.yaml` for a complete list of arguments.
 
 ```
-$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true save_trajectories=true
-$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true save_trajectories=true
+$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true
+$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true
+```
+
+### Collecting Demonstrations
+
+You can collect demonstrations using the `evaluate.py` script. To save observations in RGB while running state-based policies, set the `obs` and `obs_save` parameters accordingly.
+
+You'll need a **DEMO3** or **TD-MPC2** checkpoint. Then, run the following command, specifying the task, checkpoint path, and enabling `save_trajectories`:
+
+```
+$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true save_trajectories=true obs="state" obs_save="rgb"
+$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true save_trajectories=true obs="state" obs_save="rgb"
 ```
 
 ### Training
