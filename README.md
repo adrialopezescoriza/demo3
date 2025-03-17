@@ -78,11 +78,11 @@ $ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save
 
 You can collect demonstrations using the `evaluate.py` script. To save observations in RGB while running state-based policies, set the `obs` and `obs_save` parameters accordingly.
 
-You'll need a **DEMO3** or **TD-MPC2** checkpoint. Then, run the following command, specifying the task, checkpoint path, and enabling `save_trajectories`:
+You'll need a **DEMO3** or **TD-MPC2** checkpoint. Pre-trained **TD-MPC2** checkpoints for some tasks are available [here](https://drive.google.com/drive/folders/1SQukMBzW2D-aeS_7X_7GbGGaEoqEGKeu?usp=sharing). Then, run the following command, specifying the task, checkpoint path, and enabling `save_trajectory`:
 
 ```
-$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true save_trajectories=true obs="state" obs_save="rgb"
-$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true save_trajectories=true obs="state" obs_save="rgb"
+$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true save_trajectory=true obs="state" obs_save="rgb"
+$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true save_trajectory=true obs="state" obs_save="rgb"
 ```
 
 ### Training
