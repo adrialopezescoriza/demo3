@@ -70,19 +70,19 @@ We provide examples of how to evaluate our provided DEMO<sup>3</sup> checkpoints
 See the below examples on how to evaluate pre-trained checkpoints. See `eval.yaml` for a complete list of arguments.
 
 ```
-$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true
-$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true
+$ python demo3/evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true
+$ python demo3/evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true
 ```
 
 ### Collecting Demonstrations
 
-You can collect demonstrations using the `evaluate.py` script. To save observations in RGB while running state-based policies, set the `obs` and `obs_save` parameters accordingly.
+You can collect demonstrations using the `demo3/evaluate.py` script. To save observations in RGB while running state-based policies, set the `obs` and `obs_save` parameters accordingly.
 
-You'll need a **DEMO3** or **TD-MPC2** checkpoint. Pre-trained **TD-MPC2** checkpoints for some tasks are available [here](https://drive.google.com/drive/folders/1SQukMBzW2D-aeS_7X_7GbGGaEoqEGKeu?usp=sharing). Then, run the following command, specifying the task, checkpoint path, and enabling `save_trajectory`:
+You'll need a **DEMO3** or **TD-MPC2** checkpoint. Pre-trained **TD-MPC2** checkpoints for some Maniskill tasks are available [here](https://drive.google.com/drive/folders/1SQukMBzW2D-aeS_7X_7GbGGaEoqEGKeu?usp=sharing). Then, run the following command, specifying the task, checkpoint path, and enabling `save_trajectory`:
 
 ```
-$ python evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true save_trajectory=true obs="state" obs_save="rgb"
-$ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save_video=true save_trajectory=true obs="state" obs_save="rgb"
+$ python demo3/evaluate.py task=ms-stack-cube-semi checkpoint=/path/to/stack-cube.pt save_video=true save_trajectory=true obs="state" obs_save="rgb"
+$ python demo3/evaluate.py task=ms-humanoid-transport-box-semi checkpoint=/path/to/humanoid-transport-box.pt save_video=true save_trajectory=true obs="state" obs_save="rgb"
 ```
 
 ### Training
@@ -90,14 +90,14 @@ $ python evaluate.py task=mw-assembly-dense checkpoint=/path/to/assembly.pt save
 See below examples on how to train DEMO<sup>3</sup> on multi-stage tasks. We recommend configuring [Weights and Biases](https://wandb.ai) (`wandb`) in `demo3.yaml` to track training progress.
 
 ```
-$ python train.py task=ms-stack-cube-semi steps=1000000 demo_path=/path/to/ms-demos/stack-cube-200.pkl enable_reward_learning=true
-$ python train.py task=mw-assembly-semi steps=500000 obs=rgb demo_path=/path/to/mw-demos/assembly-200.pkl enable_reward_learning=true
+$ python demo3/train.py task=ms-stack-cube-semi steps=1000000 demo_path=/path/to/ms-demos/stack-cube-200.pkl enable_reward_learning=true
+$ python demo3/train.py task=mw-assembly-semi steps=500000 obs=rgb demo_path=/path/to/mw-demos/assembly-200.pkl enable_reward_learning=true
 ```
 
 We recommend using default hyperparameters for single-task online RL from the official TD-MPC2 implementation, although they can be modified in `tdmpc2.yaml`. Alternatively, the backbone algorithm TD-MPC2 can be run by deactivating reward learning, demonstration oversampling and policy pretraining:
 
 ```
-$ python train.py task=ms-stack-cube-semi steps=1000000 enable_reward_learning=false demo_sampling_ratio=0.0 policy_pretraining=False
+$ python demo3/train.py task=ms-stack-cube-semi steps=1000000 enable_reward_learning=false demo_sampling_ratio=0.0 policy_pretraining=False
 ```
 
 ----
@@ -133,3 +133,4 @@ You are very welcome to contribute to this project. If you have suggestions or b
 ## License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details. Note that the repository relies on third-party code, which is subject to their respective licenses.
+
