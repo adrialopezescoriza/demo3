@@ -10,7 +10,7 @@ num_envs: 1
 sim_backend: gpu
 
 # evaluation
-checkpoint: /home/adria/tdmpc2/ckpt/Maniskill3/tdmpc/PegInsertionSide.pt
+checkpoint: /absolute/path/to/checkpoint
 eval_episodes: 1
 # saving
 save_trajectory: false
